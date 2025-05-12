@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 
 namespace TrainDepartureDisplay
@@ -12,6 +13,7 @@ namespace TrainDepartureDisplay
     {
         private Timer timer;
         private List<Departure> timetable;
+        private const string CsvFileName = "timetable.csv";
 
         public MainForm()
         {
@@ -27,10 +29,27 @@ namespace TrainDepartureDisplay
             SetupTimer();
         }
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            // CSVファイルの存在を確認
+            if (!File.Exists(CsvFileName))
+            {
+                MessageBox.Show($"時刻表ファイル「{CsvFileName}」が見つかりません。\nアプリを終了します。",
+                                "エラー",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                Application.Exit();
+                return;
+            }
+
+            // CSVの読み込み処理に続く
+            LoadTimetable();
+        }
+
         private void LoadTimetable()
         {
             timetable = new List<Departure>();
-            var lines = File.ReadAllLines("timetable.csv");
+            var lines = File.ReadAllLines(CsvFileName, Encoding.GetEncoding("shift_jis"));
             foreach (var line in lines.Skip(1)) // Skip header
             {
                 var parts = line.Split(',');
