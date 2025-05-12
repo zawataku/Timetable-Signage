@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timetable-Signage", "Timetable-Signage\Timetable-Signage.csproj", "{A7AFBE4D-F604-4755-9880-6EAD843EBF42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7AFBE4D-F604-4755-9880-6EAD843EBF42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7AFBE4D-F604-4755-9880-6EAD843EBF42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7AFBE4D-F604-4755-9880-6EAD843EBF42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7AFBE4D-F604-4755-9880-6EAD843EBF42}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A7ECE7B-43FA-4959-B707-AB1D485C0CAD}
+	EndGlobalSection
+EndGlobal
